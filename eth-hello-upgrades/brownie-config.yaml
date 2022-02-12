@@ -1,0 +1,22 @@
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@4.4.0
+compiler:
+  solc:
+    remappings:
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.4.0'
+reports:
+  exclude_contracts:
+    - SafeMath
+autofetch_sources: True
+dotenv: .env
+networks:
+  default: development
+  development:
+    verify: False
+  rinkeby:
+    verify: False
+  ganache:
+    verify: False
+wallets:
+  from_key: ${PRIVATE_KEY}
+  from_mnemonic: ${MNEMONIC}
